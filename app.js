@@ -1,9 +1,15 @@
 import express from "express";
+
 import createError from "http-errors";
+
 import morgan from "morgan";
+
 import dotenv from "dotenv";
+
 import mongoose from "mongoose";
+
 import Routes from "./routes/api.route.js";
+
 dotenv.config();
 
 const app = express();
@@ -30,6 +36,7 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 3000;
+
 // initialize MongoDB & Server
 app.listen(PORT, () => {
   mongoose
